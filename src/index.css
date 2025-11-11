@@ -8,40 +8,46 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Monkedex minimalist design system - white background, high contrast */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    /* Monkedex banana-gold design system */
+    --background: 43 100% 95%; /* Ivory #FFF7E6 */
+    --foreground: 150 38% 21%; /* Deep jungle #214A37 */
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card-foreground: 150 38% 21%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover-foreground: 150 38% 21%;
 
-    --primary: 0 0% 0%;
-    --primary-foreground: 0 0% 100%;
+    /* Banana gold primary */
+    --primary: 47 91% 63%; /* Banana gold #F7D44C */
+    --primary-foreground: 150 38% 21%; /* Deep jungle text on banana */
+    --primary-hover: 46 81% 58%; /* #E9C23F */
+    --primary-active: 43 76% 50%; /* #D3A92E */
 
-    --secondary: 0 0% 95%;
-    --secondary-foreground: 0 0% 0%;
+    /* Leaf green secondary */
+    --secondary: 145 52% 61%; /* Leaf green #6CCB8E */
+    --secondary-foreground: 150 38% 21%;
+    --secondary-hover: 145 49% 56%; /* #5BBF82 */
 
-    --muted: 0 0% 97%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 48 40% 94%;
+    --muted-foreground: 150 25% 35%;
 
-    --accent: 0 0% 90%;
-    --accent-foreground: 0 0% 0%;
+    /* Banana cream accent */
+    --accent: 48 100% 88%; /* Banana cream #FFF4C2 */
+    --accent-foreground: 150 38% 21%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 85%;
-    --input: 0 0% 85%;
-    --ring: 0 0% 0%;
+    --border: 47 30% 85%;
+    --input: 47 30% 85%;
+    --ring: 48 100% 80%; /* Focus ring #FFEB99 */
 
-    --radius: 0rem;
+    --radius: 0.5rem;
 
-    /* Archive-specific tokens */
+    /* Monkedex-specific tokens */
     --grid-gap: 1.5rem;
-    --card-hover: 0 0% 93%;
+    --card-hover: 48 100% 92%;
   }
 
 }
@@ -49,6 +55,7 @@ All colors MUST be HSL.
 @layer base {
   * {
     @apply border-border;
+    cursor: url('/banana-cursor.png') 12 0, auto;
   }
 
   body {
@@ -57,6 +64,10 @@ All colors MUST be HSL.
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-sans font-normal tracking-tight;
+  }
+
+  a, button {
+    cursor: url('/banana-cursor.png') 12 0, pointer;
   }
 }
 

@@ -10,17 +10,17 @@ const PrimateCard = ({ entry }: PrimateCardProps) => {
   return (
     <Link 
       to={`/entry/${entry.id}`}
-      className="group block border border-border hover:border-primary/50 rounded-lg overflow-hidden transition-all hover:shadow-lg"
+      className="group block border-2 border-border hover:border-primary rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
     >
       <div className="aspect-square overflow-hidden bg-muted relative">
         <img 
           src={entry.imageUrl} 
           alt={entry.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         />
       </div>
       <div className="p-3 space-y-1.5 bg-card">
-        <h3 className="font-medium text-sm line-clamp-1">{entry.name}</h3>
+        <h3 className="font-medium text-sm line-clamp-1 group-hover:text-primary transition-colors">{entry.name}</h3>
         <p className="text-xs text-muted-foreground line-clamp-1">{entry.species}</p>
         <p className="text-xs text-muted-foreground line-clamp-1">
           {entry.title} ({entry.year})
