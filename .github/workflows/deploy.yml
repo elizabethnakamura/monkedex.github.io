@@ -32,6 +32,8 @@ jobs:
         run: |
           cp dist/index.html dist/404.html
           touch dist/.nojekyll
+          echo "Dist contents:" && ls -la dist || true
+          echo "Dist tree (top-level):" && find dist -maxdepth 2 -type f -print || true
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v3
