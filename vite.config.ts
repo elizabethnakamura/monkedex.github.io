@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/', // correct for monkedex.github.io (user/org GitHub Pages site)
+  base: '/monkedex/', // correct for project pages: https://elizabethnakamura.github.io/monkedex
   server: {
     host: "::",
     port: 8080,
